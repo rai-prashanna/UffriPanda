@@ -1,0 +1,32 @@
+package trail;
+import java.awt.*;
+
+import javax.swing.ImageIcon;
+
+
+
+public class basestep {
+
+	Image bstep;
+	int x, y;
+	
+	public basestep()
+	{
+		x=0;
+		y=500;
+		ImageIcon i= new ImageIcon("C:/basestep.png");
+		bstep=i.getImage();
+	}
+	public Rectangle getbound()
+	{
+		return new Rectangle(x,y,480,140);
+	}
+	public int getX()
+	{
+		return x;
+	}
+	public int getY()
+	{
+		return y;
+	}
+}

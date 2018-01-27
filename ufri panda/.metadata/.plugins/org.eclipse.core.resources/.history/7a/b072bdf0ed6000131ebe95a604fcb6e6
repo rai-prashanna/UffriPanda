@@ -1,0 +1,19 @@
+package trail;
+
+import javax.swing.*;
+
+public class frame {
+ 
+        public frame(){
+                JFrame frame = new JFrame();
+                frame.add(new board());
+                frame.setTitle("Ufri");
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setSize(480,650);
+                frame.setVisible(true);
+                frame.setLocationRelativeTo(null);
+        }
+        public static void main(String[] args){
+                new frame();
+        }
+}

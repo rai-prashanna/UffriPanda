@@ -1,0 +1,28 @@
+package trail;
+
+import java.util.ArrayList;
+
+public class arya {
+	int x;
+	step s;
+	static ArrayList bamboolist;
+	public static ArrayList getlist()
+
+    {
+
+            return bamboolist;
+
+    }
+
+	public arya()
+	{
+		bamboolist=new ArrayList();
+		x=0;
+	}
+	public void increase()
+	{
+		step z = new step();
+
+        bamboolist.add(z);
+	}
+}

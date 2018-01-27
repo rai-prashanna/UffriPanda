@@ -1,0 +1,25 @@
+package trail;
+
+
+import java.awt.Image;
+import java.awt.Window;
+import java.io.IOException;
+
+import javax.swing.*;
+
+public class Frame {
+ 
+        public Frame(){
+                JFrame frame = new JFrame();
+                frame.add(new board());
+                frame.setTitle("Ufri");
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setSize(480,650);
+                frame.setVisible(true);
+                frame.setLocationRelativeTo(null);
+        }
+        public static Window gameWindow; 
+        public static void main(String[] args) {
+                new Frame();
+        }
+}

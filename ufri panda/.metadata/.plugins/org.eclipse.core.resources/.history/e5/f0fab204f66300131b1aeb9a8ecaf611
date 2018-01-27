@@ -1,0 +1,9 @@
+package trail;
+
+public class welcome {
+
+	public welcome()
+	{
+		
+	}
+}

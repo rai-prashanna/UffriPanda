@@ -1,0 +1,10 @@
+package trail;
+
+ 
+public class board {
+	welcome p;
+      public board()
+      {
+    	  p=new welcome();
+      }
+}

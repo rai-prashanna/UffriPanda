@@ -1,0 +1,36 @@
+package trail;
+
+
+import java.awt.Window;
+
+import javax.swing.*;
+
+public class Frame {
+ 
+        public Frame(){
+                JFrame frame = new JFrame();
+                frame.add(new board());
+                frame.setTitle("Ufri");
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setSize(480,650);
+                frame.setVisible(true);
+                frame.setLocationRelativeTo(null);
+        }
+        public static Window gameWindow; 
+        public static void main(String[] args){
+                        /*Board extends JPanel
+        	      //Window extends JFrame
+        	 
+        	    gameWindow = new Window("My Game"); 
+        	    //DisplayScreen extends JPanel
+        	    DisplayScreen intro = new DisplayScreen("welcomeScreen.png"); 
+        	    gameWindow.setSize(960, 570); 
+        	    gameWindow.add(intro); 
+        	    gameWindow.setVisible(true); 
+        	    wait(10); //just a function I wrote 
+        	  
+        	    gameWindow.remove(intro);  
+        	  */
+                new Frame();
+        }
+}

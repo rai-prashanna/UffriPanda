@@ -1,0 +1,84 @@
+package trail;
+
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import javax.swing.ImageIcon;
+ 
+public class Dude {
+        int x, dx, y,n,bpc,drawnum,m,j;
+        Image still;
+        step q;
+          
+        public Dude() {
+                ImageIcon i = new ImageIcon("C:/panda.png");
+                still = i.getImage();
+                x = 220;
+                y = 500;
+                bpc=0;
+                drawnum=0;
+                m=400;
+        }
+        
+  
+        
+        public void move() {
+        	/*for(j=0;j<10;j++)
+			{
+				if((y+60)==q.y[j])
+				{
+					if((x+28)>q.x[j] && (x+28)<(q.x[j]+120))
+					{
+						m=400;
+					}
+				}
+			}*/
+        	if(m==400)
+        	n=0;
+        	if(m==0)
+        		n=1;
+        	if(n==0)
+        	{
+        		y--;
+        		m--;
+        	}
+        	else
+        	{
+        		y++;
+        	}
+        	x+=dx;
+        	
+        	
+        }
+ 
+        public int getX() {
+                return x;
+        }
+ 
+        public int getY() {
+                return y;
+        }
+ 
+        public Image getImage() {
+                return still;
+        }
+ 
+        public void keyPressed(KeyEvent e) {
+                int key = e.getKeyCode();
+                if (key == KeyEvent.VK_LEFT)
+                        dx = -1;
+ 
+                if (key == KeyEvent.VK_RIGHT)
+                        dx = 1;
+        }
+ 
+        public void keyReleased(KeyEvent e) {
+                int key = e.getKeyCode();
+ 
+                if (key == KeyEvent.VK_LEFT)
+                        dx = 0;
+ 
+                if (key == KeyEvent.VK_RIGHT)
+                        dx = 0;
+        }
+ 
+}

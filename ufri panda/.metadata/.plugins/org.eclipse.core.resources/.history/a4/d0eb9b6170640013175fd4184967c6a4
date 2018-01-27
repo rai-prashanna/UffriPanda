@@ -1,0 +1,23 @@
+package trail;
+
+import java.awt.event.KeyEvent;
+
+public class welcome {
+	
+	public int flag1=1;
+	public welcome()
+	{
+		System.out.println("nepallllllllllllllllllllllllllllll");
+		flag1=getflag();
+	}
+	public int getflag()
+	{
+		return flag1;
+	}
+	public void keyPressed(KeyEvent e) {
+        int key = e.getKeyCode();
+        if (key == KeyEvent.VK_LEFT)
+                flag1 = 1;
+
+}
+}

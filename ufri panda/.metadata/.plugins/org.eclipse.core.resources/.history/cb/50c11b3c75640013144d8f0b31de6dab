@@ -1,0 +1,126 @@
+package trail;
+
+import java.awt.*;
+import java.awt.event.KeyEvent;
+
+import javax.swing.ImageIcon;
+ 
+public class Dude {
+        int x, dx, y,j,enemydx,enemydxflag;
+        int m,n;//up and down
+        Image still;
+        step q;
+        int flag;
+        int score;
+        boolean wvisible;
+          
+        public Dude() {
+                ImageIcon i = new ImageIcon("C:/panda.png");
+                still = i.getImage();
+                x = 220;
+                y = 450;
+                m=-1;
+                flag=1;
+                enemydxflag=0;
+                wvisible=true;
+        }
+        
+  
+        
+        public void move() {
+            //enemy left right move
+        	if(m>-1)
+        	{
+            if(enemydx==0)
+                enemydxflag=0;
+            if(enemydx==142)
+                enemydxflag=1;
+            if(enemydxflag==0)
+                enemydx++;
+            else
+                enemydx--;
+             
+            //panda up down move
+        	if(y>550)
+                flag=2;
+        	if(m==130)
+        	n=0;
+        	if(m==0)
+        		n=1;
+        	if(n==0)
+        	{
+        		y-=2;
+        		m-=2;
+        	}
+        	else
+        	{
+        		y+=2;
+        	}
+        	x+=dx;
+        	if(x>450)
+        		x=0;
+        	if(x<0)
+        		x=450;
+        	}
+        	else
+        		wvisible=true;
+        	
+        }
+        public int getflag()
+        {
+            return flag;
+        }
+        public int getenemydx()
+        {
+            return enemydx;
+        }
+        public Rectangle getBounds()
+        {
+                return new Rectangle(x+10,y+59, 36, 1);
+        }
+        public Rectangle getBounds1()
+        {
+                return new Rectangle(x,y, 56, 60);
+        }
+ 
+        public int getX() {
+                return x;
+        }
+ 
+        public int getY() {
+                return y;
+        }
+ 
+        public Image getImage() {
+                return still;
+        }
+        public boolean getwvisible()
+        {
+        	return wvisible;
+        }
+ 
+        public void keyPressed(KeyEvent e) {
+                int key = e.getKeyCode();
+                if (key == KeyEvent.VK_LEFT)
+                        dx = -1;
+ 
+                if (key == KeyEvent.VK_RIGHT)
+                        dx = 1;
+                if (key == KeyEvent.VK_ENTER)
+                {
+                    wvisible=false;
+                    m=130;
+                }
+        }
+ 
+        public void keyReleased(KeyEvent e) {
+                int key = e.getKeyCode();
+ 
+                if (key == KeyEvent.VK_LEFT)
+                        dx = 0;
+ 
+                if (key == KeyEvent.VK_RIGHT)
+                        dx = 0;
+        }
+ 
+}

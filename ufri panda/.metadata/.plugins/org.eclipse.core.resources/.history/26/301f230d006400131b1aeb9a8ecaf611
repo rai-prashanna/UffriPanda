@@ -1,0 +1,14 @@
+package trail;
+
+public class welcome {
+	
+	int flag=1;
+	public welcome()
+	{
+		
+	}
+	public int getflag()
+	{
+		return flag;
+	}
+}

@@ -1,0 +1,15 @@
+package trail;
+
+public class welcome {
+	
+	int flag=1;
+	public welcome()
+	{
+		System.out.println("nepallllllllllllllllllllllllllllll");
+	}
+	public int getflag()
+	{
+		flag =1;
+		return flag;
+	}
+}
